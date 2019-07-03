@@ -1,5 +1,6 @@
 {
     "name": "yac-redis/yac-redis",
+    "license": "MIT",
     "authors": [
         {
             "name": "xHai",
