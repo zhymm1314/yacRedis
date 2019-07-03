@@ -1,11 +1,15 @@
 {
     "name": "yac-redis/yac-redis",
+
     "license": "MIT",
+    "keywords": ["redis","yac"],
+    "type": "library",
     "authors": [
         {
             "name": "xHai",
             "email": "1260997901@qq.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "minimum-stability": "dev",
 }
