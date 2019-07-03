@@ -4,12 +4,10 @@
  * User: 'xHai'
  * Date: 2019/6/12 0012
  * Time: 18:26
+ * 调用方法
  */
 
-namespace app\common\yacredis;
-
-use app\common\service\ExternalApi;
-
+namespace yacredis;
 
 class YacRedis
 {
@@ -30,7 +28,7 @@ class YacRedis
         $waveCache->localCache = $localCache;
 
         //加载redis操作类
-        $redis = ExternalApi::redisApi();
+        $redis = new Redis();
         $waveCache->redisCache = $redis;
         $waveCache->redisSelect = $select;
         $waveCache->redisPrefix = 'yacRedis:';
@@ -59,7 +57,7 @@ class YacRedis
         $waveCache->localCache = $localCache;
 
         //加载redis操作类
-        $redis = ExternalApi::redisApi();
+        $redis = new Redis();
         $waveCache->redisCache = $redis;
         $waveCache->redisSelect = $select;
         $waveCache->redisPrefix = 'yacRedis:';

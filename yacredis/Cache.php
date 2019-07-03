@@ -1,12 +1,13 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 'chensha'
+ * User: 'xHai'
  * Date: 2019/6/12 0012
  * Time: 10:22
+ * yac 缓存需要安装相应的扩展
  */
-
-namespace app\common\yacredis;
+    
+namespace cache;
 
 
 class Cache

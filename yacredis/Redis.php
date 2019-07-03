@@ -1,23 +1,6 @@
 <?php
-// +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2006~2018 http://thinkphp.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
-// +----------------------------------------------------------------------
+namespace redis;
 
-namespace Redis;
-
-
-/**
- * Redis缓存驱动，适合单机部署、有前端代理实现高可用的场景，性能最好
- * 有需要在业务层实现读写分离、或者使用RedisCluster的需求，请使用Redisd驱动
- *
- * 要求安装phpredis扩展：https://github.com/nicolasff/phpredis
- */
 class Redis
 {
     protected $options = [
@@ -60,7 +43,6 @@ class Redis
             $this->handler->connect('127.0.0.1','6379');
         }else{  //线上
             $func = $this->options['persistent'] ? 'pconnect' : 'connect';
-//            p($redisConfig);
             $this->handler->$func($this->options['host'], $this->options['port'], $this->options['timeout']);
 
             if ('' != $this->options['password']) {
@@ -196,7 +178,11 @@ class Redis
         return $this->handler->flushDB();
     }
 
-    //2018年8月2日17:55:43 llj
+    /**
+     * 选择库
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
     public function select($id)
     {
       $this->handler->select($id);
