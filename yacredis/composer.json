@@ -1,8 +1,10 @@
 {
-    "name": "yacRedis/yacRedis",
-    "description": "A short description of what your package does",
-    "require": {
-        "php": "^7.2",
-        "another-vendor/package": "1.*"
-    }
+    "name": "yac-redis/yac-redis",
+    "authors": [
+        {
+            "name": "xHai",
+            "email": "1260997901@qq.com"
+        }
+    ],
+    "require": {}
 }
