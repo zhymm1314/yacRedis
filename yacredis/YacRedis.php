@@ -8,6 +8,9 @@
  */
 
 namespace yacredis;
+use redis\Redis;
+use wavecache\WaveCache;
+use cache\Cache;
 
 class YacRedis
 {

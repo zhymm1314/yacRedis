@@ -1,6 +1,5 @@
 {
     "name": "yac-redis/yac-redis",
-
     "license": "MIT",
     "keywords": ["redis","yac"],
     "type": "library",
